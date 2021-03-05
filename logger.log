@@ -1,0 +1,9 @@
+2021-02-17 00:08:53 INFO  HibernateMetadataProvider:24 - Get schemas size: 4
+2021-03-05 21:28:32 INFO  HibernateMetadataProvider:42 - Get domain name: 0
+2021-03-05 21:28:32 INFO  HibernateMetadataProvider:33 - Get column names: 310
+2021-03-05 21:28:32 INFO  HibernateMetadataProvider:51 - Get all types: 34
+2021-03-05 21:28:32 INFO  HibernateMetadataProvider:24 - Get schemas size: 2
+2021-03-05 21:47:06 INFO  HibernateMetadataProvider:42 - Get domain name: 0
+2021-03-05 21:47:06 INFO  HibernateMetadataProvider:33 - Get column names: 310
+2021-03-05 21:47:06 INFO  HibernateMetadataProvider:51 - Get all types: 34
+2021-03-05 21:47:06 INFO  HibernateMetadataProvider:24 - Get schemas size: 2
