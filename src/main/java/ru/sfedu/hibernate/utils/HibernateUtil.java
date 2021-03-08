@@ -7,6 +7,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import ru.sfedu.hibernate.Jr2.model.TestEntity;
 
+
 //import
 
 import java.io.File;
@@ -35,6 +36,15 @@ public class HibernateUtil {
                     new MetadataSources(serviceRegistry);
 
             metadataSources.addAnnotatedClass(TestEntity.class);
+            //metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.mappedSuperclass.model.Eatable.class);
+            //metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.mappedSuperclass.model.Uneatable.class);
+            //metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.tablePerClass.model.Uneatable.class);
+            //metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.tablePerClass.model.Product.class);
+            //metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.tablePerClass.model.Eatable.class);
+            metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.singleTable.model.Eatable.class);
+            metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.singleTable.model.Uneatable.class);
+            metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.singleTable.model.Product.class);
+
             sessionFactory = metadataSources.buildMetadata().buildSessionFactory();
         }
 

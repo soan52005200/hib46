@@ -18,15 +18,25 @@ public class TestEntity implements Serializable {
     @Temporal(TIME)
     private Date dateCreated;
 
+    @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "name", column = @Column(name = "FIRST_NAME")),
+            @AttributeOverride(name = "numtest", column = @Column(name = "FIRST_NUMTEST")),
+            @AttributeOverride(name = "phone_number", column = @Column(name = "FIRST_PHONENUMBER"))
+    })
+    private User firstUser;
+
+
 
     public TestEntity(){
 
     }
 
-    public TestEntity(String name, String description, Date dateCreated) {
+    public TestEntity(String name, String description, Date dateCreated, User firstUser) {
         this.name = name;
         this.description = description;
         this.dateCreated = dateCreated;
+        this.firstUser = firstUser;
     }
 
     public Long getId() {
@@ -59,6 +69,23 @@ public class TestEntity implements Serializable {
 
     public void setDateCreated(Date dateCreated) {
         this.dateCreated = dateCreated;
+    }
+
+    public User getFirstUser() {
+        return firstUser;
+    }
+
+    public void setFirstUser(User firstUser) {
+        this.firstUser = firstUser;
+    }
+
+    @Override
+    public String toString() {
+        return "TestEntity{" +
+                "id=" + id +
+                ", dateCreated='" + dateCreated + '\'' +
+                ", firstUser=" + firstUser +
+                '}';
     }
 
 }

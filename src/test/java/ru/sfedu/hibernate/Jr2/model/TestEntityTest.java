@@ -18,7 +18,7 @@ import static ru.sfedu.hibernate.Constants.HIBERNATE_CFG_KEY;
 public class TestEntityTest {
 
     public TestEntityTest() {
-        System.setProperty(HIBERNATE_CFG_KEY,"/home/sergey/IdeaProjects/hib46/src/test/resources/hibernate1.cfg.xml");
+        System.setProperty(HIBERNATE_CFG_KEY,"C:\\hib46\\src\\test\\resources\\hibernate1.cfg.xml");
 
     }
     private Session getSession(){
@@ -30,7 +30,7 @@ public class TestEntityTest {
     public void createTestEntity(){
         Session session = getSession();
         session.getTransaction().begin();
-        Long id = (Long) session.save(new TestEntity("Andrew","User",new Date()));
+        Long id = (Long) session.save(new TestEntity("Andrew","User",new Date(),new User("Valera",9888,"good")));
         session.getTransaction().commit();
         assertNotNull(id);
     }
@@ -39,7 +39,7 @@ public class TestEntityTest {
     public void getById() {
         Session session = getSession();
         session.getTransaction().begin();
-        Long id = (Long) session.save(new TestEntity("Andrew","User",new Date()));
+        Long id = (Long) session.save(new TestEntity("Andrew","User",new Date(),new User("Valera",9888,"good")));
         session.getTransaction().commit();
 
         assertTrue(Optional.ofNullable(session.find(TestEntity.class, id)).isPresent());
@@ -49,7 +49,8 @@ public class TestEntityTest {
     public void delById() {
         Session session = getSession();
         session.getTransaction().begin();
-        Long id = (Long) session.save(new TestEntity("Andrew","User",new Date()));
+        Long id = (Long) session.save(new TestEntity("Andrew","User",new Date(),new User("Valera",9888,"good")));
+
         session.getTransaction().commit();
 
         TestEntity testEntity = session.find(TestEntity.class, id);
@@ -68,7 +69,7 @@ public class TestEntityTest {
     public void upd() {
         Session session = getSession();
         session.getTransaction().begin();
-        Long id = (Long) session.save(new TestEntity("Andrew","User",new Date()));
+        Long id = (Long) session.save(new TestEntity("Andrew","User",new Date(),new User("Valera",9888,"good")));
         session.getTransaction().commit();
 
         TestEntity testEntity = session.find(TestEntity.class, id);
