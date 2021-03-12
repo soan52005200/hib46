@@ -2,8 +2,8 @@ package ru.sfedu.hibernate.lab3.tablePerClass.model;
 
 
 
-import ru.sfedu.hibernate.lab3.mappedSuperclass.model.Product;
-import ru.sfedu.hibernate.lab3.mappedSuperclass.model.ProductType;
+import ru.sfedu.hibernate.lab3.tablePerClass.model.Product;
+import ru.sfedu.hibernate.lab3.tablePerClass.model.ProductType;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

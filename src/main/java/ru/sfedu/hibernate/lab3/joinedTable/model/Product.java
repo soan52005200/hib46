@@ -1,8 +1,8 @@
-package ru.sfedu.hibernate.lab3.singleTable.model;
+package ru.sfedu.hibernate.lab3.joinedTable.model;
 
 
 
-import ru.sfedu.hibernate.lab3.singleTable.model.ProductType;
+import ru.sfedu.hibernate.lab3.joinedTable.model.ProductType;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -11,8 +11,9 @@ import java.util.Date;
  * Class Product
  */
 @Entity
-@Table(schema = "lab3_st")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Table(schema = "lab3_jt")
+@Inheritance(strategy = InheritanceType.JOINED)
+
 public abstract class Product {
 
   //

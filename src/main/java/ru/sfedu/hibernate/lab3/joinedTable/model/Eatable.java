@@ -1,9 +1,9 @@
-package ru.sfedu.hibernate.lab3.singleTable.model;
+package ru.sfedu.hibernate.lab3.joinedTable.model;
 
 
 
-import ru.sfedu.hibernate.lab3.singleTable.model.Product;
-import ru.sfedu.hibernate.lab3.singleTable.model.ProductType;
+import ru.sfedu.hibernate.lab3.joinedTable.model.Product;
+import ru.sfedu.hibernate.lab3.joinedTable.model.ProductType;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -18,7 +18,7 @@ import static javax.persistence.TemporalType.TIME;
  */
 
 @Entity
-//@Table(schema = "lab3_st")
+@Table(schema = "lab3_jt")
 public class Eatable extends Product {
 
   //
